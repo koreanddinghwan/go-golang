@@ -2,20 +2,12 @@ package main
 
 import (
 	"fmt"
-	"log"
 
-	"example.com/greetings"
+	"golang.org/x/example/hello/reverse"
 )
 
 func main() {
-	log.SetPrefix("greetings: ")
-	log.SetFlags(0)
+	fmt.Println(reverse.String("Hello"))
 
-	names := []string{"Gladys", "Samantha", "Darrin"}
-
-	messages, err := greetings.Hellos(names)
-	if err != nil {
-		log.Fatal(err)
-	}
-	fmt.Println(messages)
+	fmt.Println(reverse.String("Hello"), reverse.Int(123))
 }
